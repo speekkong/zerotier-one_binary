@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: Initialization Environment
@@ -48,7 +48,7 @@ jobs:
           sudo -E bash ../build.sh && \
           echo "::set-output name=status::success"
       - name: Upload ARTIFACT
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: steps.compile.outputs.status == 'success' && env.UPLOAD_ARTIFACT == 'true'
         with:
           name: ZeroTierOne-static
