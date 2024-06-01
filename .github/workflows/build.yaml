@@ -6,7 +6,7 @@ on:
       zerotier-version:
         description: "指定版本号"
         required: true
-        default: "1.10.1"
+        default: "1.12.2"
       upload-artifact:
         description: "是否上传构建产物"
         default: "true"
