@@ -6,7 +6,7 @@ TARGET_DIR=${TARGET_DIR:-"./target"}
 TARGET_DIR=$(readlink -f "${TARGET_DIR}")
 mkdir -p "${TARGET_DIR}"
 echo -n > info.txt
-for abi in x86_64-linux-gnu i686-linux-gnu aarch64-linux-gnu arm-linux-gnueabihf mips-linux-gnu mips64-linux-gnuabi64 mipsel-linux-gnu mips64el-linux-gnuabi64;do
+for abi in arm-linux-gnueabihf ;do
     command -v ${abi}-gcc || apt install gcc-${abi} g++-${abi} -y
     CC=${abi}-gcc
     CXX=${abi}-g++
