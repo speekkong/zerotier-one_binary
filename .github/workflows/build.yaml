@@ -15,7 +15,7 @@ on:
         default: "false"
 
 env:
-  TZ: Asia/Shanghai
+  TZ: US/Eastern
   DEBIAN_FRONTEND: noninteractive
   UPLOAD_ARTIFACT: ${{ github.event.inputs.upload-artifact }}
   TARGET_DIR: "${{ github.workspace }}/target"
