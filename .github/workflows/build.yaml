@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
     inputs:
       zerotier-version:
-        description: "指定版本号"
+        description: "Specifying a version number"
         required: true
         default: "1.14.0"
       upload-artifact:
-        description: "是否上传构建产物"
+        description: "Whether to upload the build product"
         default: "true"
       release-version:
-        description: "构建成功后发布成版本"
+        description: "After the build is successful, it is published as a version"
         default: "false"
 
 env:
